@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookstore Results</h1>
+        <p><strong>Selected Genres:</strong> {{ selected_genres | join(', ') }}</p>
+        <p><strong>Your Budget:</strong> £{{ user_price | round(2) }}</p>
+
+        <h2>Results:</h2>
+
+        <h3>Closest Genre: {{ closest_genre }}</h3>
+        <p><strong>Average Price for Selected Genre: </strong> £{{ closest_price | round(2) }}</p>
+
+        <h4>Closest Book:</h4>
+        <ul>
+            <li><strong>Title:</strong> {{ closest_title }}</li>
+            <li><strong>Price:</strong> £{{ closest_book_price | round(2) }}</li>
+            <li><strong>Link:</strong> <a href="{{ closest_book }}" target="_blank">View Book</a></li>
+        </ul>
+
+        <hr>
+        <h3>Average Prices for All Genres:</h3>
+        <ul>
+            {% for genre, price in average_prices.items() %}
+                <li><strong>{{ genre.capitalize() }}:</strong> £{{ price | round(2) }}</li>
+            {% endfor %}
+        </ul>
+
+        <hr>
+        <a href="{{ url_for('index') }}">Go Back</a>
+    </div>
+</body>
+</html>
+
