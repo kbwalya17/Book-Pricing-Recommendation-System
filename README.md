@@ -1,6 +1,6 @@
 # Bookstore Pricing and Recommendation System
 
-This project is a web-based tool designed to help users find books within their budget. By comparing prices across various genres, the system identifies the most affordable options and provides direct links to purchase them. Built with Python and Flask, the application scrapes data from the [Books to Scrape](https://books.toscrape.com) website and provides recommendations based on user inputs.
+This project is a web-based tool designed to help users find books within their budget. By comparing prices across various user preferred genres, the system identifies the most affordable options and provides direct links to purchase them. Built with Python and Flask, the application scrapes data from the [Books to Scrape](https://books.toscrape.com) website and provides recommendations based on user inputs.
 
 ## Key Features:
 - **Genre Selection**: Users can choose from a variety of genres including Travel, Mystery, Historical Fiction, Romance, Science Fiction, and many more.
@@ -21,7 +21,7 @@ This project is a web-based tool designed to help users find books within their 
 2. **Genre Data Management**: 
     - If an Excel sheet containing book data for the chosen genre already exists, the app will load the data from the sheet.
     - If no data is found, the app scrapes the latest book information for that genre from the Books to Scrape website and stores it in a new Excel sheet.
-3. **Price Matching**: The system compares the user's budget against the average price of books in the selected genre.
+3. **Price Matching**: The system compares the user's budget against the average price of books in the selected or preferred genre.
 4. **Closest Book**: The system finds the book with the closest price to the user's budget and displays the title, price, and a direct link to the bookstore website where the book can be purchased.
 5. **User Interface**: The system features a simple web interface where users can interact with the application and view their results.
 
