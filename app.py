@@ -87,7 +87,7 @@ def find_closest_book(genre_urls, target_price):
             if closest_price is None or abs(price - target_price) < abs(closest_price - target_price):
                 closest_price = price
                 closest_title = title
-                closest_book = url  # Store the book URL for reference
+                closest_book = url  
     return closest_book, closest_title, closest_price
 
 # Main route
